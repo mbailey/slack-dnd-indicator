@@ -25,5 +25,5 @@ Make this an accessible solution for everyone who might benefit!
 - make it simple to install on Linux, MacOs, Windows
 
 
-[blink](https://www.kickstarter.com/projects/thingm/blink1-the-usb-rgb-led)
+[blink](https://blink1.thingm.com/)
 [legacy-tokens]: https://api.slack.com/custom-integrations/legacy-tokens
