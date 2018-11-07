@@ -19,11 +19,12 @@ A throwaway script that:
 
 ## What's to be done?
 
-Make this an accessible solution for everyone who might benefit!
-- make it change the color of the blink(1) USB LED lights we've ordered (due 14 Nov via FEDEX)
+Make this a great solution for everyone who might benefit!
+- make it change the color a blink(1) USB LED light (5 due on 14 Nov via FEDEX)
 - work out the best way to mount them (attach to monitor?)
 - make it simple to install on Linux, MacOs, Windows
-
+- replace Legacy Token with Slack Apps OAUTH flow(?)
+- use your imagination!
 
 [blink](https://blink1.thingm.com/)
 [legacy-tokens]: https://api.slack.com/custom-integrations/legacy-tokens
