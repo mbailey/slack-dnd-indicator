@@ -7,6 +7,8 @@ I want a little light on my monitor that indicates whether I'm available.
 
 And I want it to change color when I update my Snooze Notifications on Slack.
 
+![blink(1)](blink1mk2-gooseneck.jpg)
+
 ## What's done already?
 
 A throwaway script that:
