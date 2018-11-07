@@ -13,8 +13,17 @@ And I want it to change color when I update my Snooze Notifications on Slack.
 
 A throwaway script that:
 - connects to Slack using the [Legacy Tokens][legacy-tokens] they advise against using
-- reads current Snooze status
-- listens on a websocket for updates to Snooze Status
+- reads [current Snooze status](https://api.slack.com/methods/dnd.info)
+- listens to Slack's [RealTime Messaging API](https://api.slack.com/rtm) for updates to Snooze Status
+- prints status to screen on startup and when it changes
+
+## What's to be done?
+
+Make this an accessible solution for everyone who might benefit!
+- make it change the color of the blink(1) USB LED lights we've ordered (due 14 Nov via FEDEX)
+- work out the best way to mount them (attach to monitor?)
+- make it simple to install on Linux, MacOs, Windows
 
 
+[blink](https://www.kickstarter.com/projects/thingm/blink1-the-usb-rgb-led)
 [legacy-tokens]: https://api.slack.com/custom-integrations/legacy-tokens
