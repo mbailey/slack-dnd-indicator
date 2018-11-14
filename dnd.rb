@@ -38,8 +38,10 @@ dnd_info = client.dnd_info
 def status(dnd_info)
   pp dnd_info if ENV['DEBUG']
   if dnd_info[:snooze_enabled]
+    `/usr/local/bin/blink1-tool --red`
     SNOOZED
   else
+    `/usr/local/bin/blink1-tool --green`
     AVAILABLE
   end
 end
