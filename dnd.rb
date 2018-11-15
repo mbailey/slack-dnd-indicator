@@ -35,10 +35,13 @@ dnd_info = client.dnd_info
 #  "next_dnd_end_ts"=>1541631600,
 #  "snooze_enabled"=>false}
 
+$thread = Thread.new {}
+
 def status(dnd_info)
   pp dnd_info if ENV['DEBUG']
   if dnd_info[:snooze_enabled]
-    Thread.new do
+    $thread.exit
+    $thread = Thread.new do
       interval = 1.seconds
 
       while(true) do
@@ -48,7 +51,8 @@ def status(dnd_info)
       end
     end
   else
-    Thread.new do
+    $thread.exit
+    $thread = Thread.new do
       interval = 1.seconds
 
       while(true) do
