@@ -38,11 +38,31 @@ dnd_info = client.dnd_info
 def status(dnd_info)
   pp dnd_info if ENV['DEBUG']
   if dnd_info[:snooze_enabled]
-    `/usr/local/bin/blink1-tool --red`
-    SNOOZED
+    if defined? $thread
+      $thread.exit
+    end
+    $thread = Thread.new do
+      interval = 1.seconds
+
+      while true do
+        `/usr/local/bin/blink1-tool --red`
+        SNOOZED
+        sleep(interval)
+      end
+    end
   else
-    `/usr/local/bin/blink1-tool --green`
-    AVAILABLE
+    if defined? $thread
+      $thread.exit
+    end
+    $thread = Thread.new do
+      interval = 1.seconds
+
+      while true do
+        `/usr/local/bin/blink1-tool --green`
+        AVAILABLE
+        sleep(interval)
+      end
+    end
   end
 end
 
